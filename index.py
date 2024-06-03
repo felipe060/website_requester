@@ -93,7 +93,7 @@ def send_email():
             s.sendmail(msg['From'], [msg['To']], msg.as_string().encode('utf-8'))
             print('email sent, I hope')
             time.sleep(60)
-            
+
         else:
             email_body = 'website status --> deu errado alguma coisa aí, meu nobre'
             print('email_body --> ', email_body)
@@ -116,4 +116,4 @@ def send_email():
         time.sleep(60)
 
 
-send_email()
+send_email(
