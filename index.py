@@ -9,9 +9,9 @@ from os import getenv, environ
 dotenv_path = find_dotenv()
 load_dotenv(dotenv_path)
 
-time.sleep(60)
 
 while True:
+    time.sleep(60)
     current_time = datetime.datetime.now()
     print(current_time)
     requisicao = requests.get('https://flasklogin.vercel.app')
