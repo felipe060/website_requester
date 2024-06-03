@@ -18,7 +18,6 @@ while True:
     print(requisicao)
 
     if requisicao == '<Response [200]>':
-        time.sleep(60)
         def send_email():
             email_body = 'website status --> Response [200]'
             print('email_body --> ', email_body)
@@ -37,11 +36,11 @@ while True:
             s.login(msg['From'], password)
             s.sendmail(msg['From'], [msg['To']], msg.as_string().encode('utf-8'))
             print('email sent, I hope')
+            time.sleep(60)
 
         send_email()
 
     else:
-        time.sleep(60)
         def send_email():
             email_body = 'website status --> deu errado alguma coisa aí, meu nobre'
             print('email_body --> ', email_body)
@@ -60,6 +59,6 @@ while True:
             s.login(msg['From'], password)
             s.sendmail(msg['From'], [msg['To']], msg.as_string().encode('utf-8'))
             print('email sent, I hope')
-
+            time.sleep(60)
 
         send_email()
