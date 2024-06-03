@@ -27,7 +27,6 @@ def send_email_200():
     s.starttls()
     s.login(msg['From'], password)
     s.sendmail(msg['From'], [msg['To']], msg.as_string().encode('utf-8'))
-    time.sleep(20)
     print('email sent, I hope')
 
 
@@ -48,7 +47,6 @@ def send_email_error():
     s.starttls()
     s.login(msg['From'], password)
     s.sendmail(msg['From'], [msg['To']], msg.as_string().encode('utf-8'))
-    time.sleep(20)
     print('email sent, I hope')
 
 
