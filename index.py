@@ -11,7 +11,6 @@ load_dotenv(dotenv_path)
 
 
 while True:
-    time.sleep(60)
     current_time = datetime.datetime.now()
     print(current_time)
     requisicao = requests.get('https://flasklogin.vercel.app')
@@ -39,7 +38,6 @@ while True:
             print('email sent, I hope')
 
         send_email()
-        time.sleep(7200)
 
     else:
         def send_email():
@@ -63,4 +61,4 @@ while True:
 
 
         send_email()
-        time.sleep(7200)
+    time.sleep(60)
