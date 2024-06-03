@@ -9,6 +9,8 @@ from os import getenv, environ
 dotenv_path = find_dotenv()
 load_dotenv(dotenv_path)
 
+time.sleep(7200)
+
 while True:
     current_time = datetime.datetime.now()
     print(current_time)
