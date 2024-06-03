@@ -56,9 +56,10 @@ while True:
     requisicao = requests.get('https://flasklogin.vercel.app')
     requisicao = str(requisicao)
     print(requisicao)
-    time.sleep(20)
 
     if requisicao == '<Response [200]>':
         send_email_200()
     else:
         send_email_error()
+
+    time.sleep(20)
