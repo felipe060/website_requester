@@ -58,9 +58,9 @@ while True:
     print(requisicao)
 
     if requisicao == '<Response [200]>':
-        send_email_200()
+        send_email_200(
 
     else:
-        send_email_error()
+        send_email_error(
 
     time.sleep(20)
