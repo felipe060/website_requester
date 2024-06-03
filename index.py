@@ -1,4 +1,3 @@
-import datetime
 import time
 import requests
 import smtplib
@@ -51,15 +50,15 @@ def send_email_error():
 
 
 while True:
-    current_time = datetime.datetime.now()
-    print(current_time)
     requisicao = requests.get('https://flasklogin.vercel.app')
     requisicao = str(requisicao)
     print(requisicao)
 
     if requisicao == '<Response [200]>':
-        send_email_200(
+        send_email_200()
+        time.sleep(20)
     else:
-        send_email_error(
+        send_email_error()
+        time.sleep(20)
 
-    time.sleep(20)
+
