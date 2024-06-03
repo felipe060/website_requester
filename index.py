@@ -33,7 +33,7 @@ while True:
             s = smtplib.SMTP('smtp.gmail.com: 587')
             s.starttls()
             s.login(msg['From'], password)
-            #s.sendmail(msg['From'], [msg['To']], msg.as_string().encode('utf-8'))
+            s.sendmail(msg['From'], [msg['To']], msg.as_string().encode('utf-8'))
             print('email sent, I hope')
 
         send_email()
@@ -56,7 +56,7 @@ while True:
             s = smtplib.SMTP('smtp.gmail.com: 587')
             s.starttls()
             s.login(msg['From'], password)
-            #s.sendmail(msg['From'], [msg['To']], msg.as_string().encode('utf-8'))
+            s.sendmail(msg['From'], [msg['To']], msg.as_string().encode('utf-8'))
             print('email sent, I hope')
 
 
