@@ -64,6 +64,3 @@ while True:
     else:
         send_email_error()
         time.sleep(20)
-
-    time.sleep(20)
-
