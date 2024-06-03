@@ -68,7 +68,6 @@ while True:
 
 def send_email():
     while True:
-        time.sleep(60)
         current_time = datetime.datetime.now()
         print(current_time)
         requisicao = requests.get('https://flasklogin.vercel.app')
@@ -93,7 +92,8 @@ def send_email():
             s.login(msg['From'], password)
             s.sendmail(msg['From'], [msg['To']], msg.as_string().encode('utf-8'))
             print('email sent, I hope')
-
+            time.sleep(60)
+            
         else:
             email_body = 'website status --> deu errado alguma coisa aí, meu nobre'
             print('email_body --> ', email_body)
@@ -112,6 +112,8 @@ def send_email():
             s.login(msg['From'], password)
             s.sendmail(msg['From'], [msg['To']], msg.as_string().encode('utf-8'))
             print('email sent, I hope')
+            time.sleep(60)
+        time.sleep(60)
 
 
 send_email()
