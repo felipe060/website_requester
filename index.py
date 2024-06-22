@@ -16,8 +16,8 @@ def send_email_200():
 
     msg = email.message.Message()
     msg['Subject'] = 'Python flask login vercel'
-    msg['From'] = 'felipica7@gmail.com'
-    msg['To'] = 'felipica7@gmail.com'
+    msg['From'] = 'your_email@email.com'
+    msg['To'] = 'your_email@email.com'
     password = environ.get('PASSWORD_GOOGLE')
     msg.add_header('Content-Type', 'text/html')
     msg.set_payload(email_body)
@@ -36,8 +36,8 @@ def send_email_error():
 
     msg = email.message.Message()
     msg['Subject'] = 'Python flask login vercel'
-    msg['From'] = 'felipica7@gmail.com'
-    msg['To'] = 'felipica7@gmail.com'
+    msg['From'] = 'your_email@email.com'
+    msg['To'] = 'your_email@email.com'
     password = environ.get('PASSWORD_GOOGLE')
     msg.add_header('Content-Type', 'text/html')
     msg.set_payload(email_body)
